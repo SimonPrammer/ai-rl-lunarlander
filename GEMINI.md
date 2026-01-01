@@ -27,7 +27,7 @@ uv sync
 ```
 
 ## Running the Application
-To run the main script using `uv`:
+To run the main script using `u/v`:
 
 ```bash
 uv run main.py
