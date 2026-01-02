@@ -83,13 +83,13 @@ export function updateGameState(state: GameState, config: GameConfig, deltaTime:
 	let newLander = { ...lander };
 
 	// Apply rotation
-	if (lander.isRotatingLeft) {
-		newLander.angularVelocity = -config.rotationSpeed;
-	} else if (lander.isRotatingRight) {
-		newLander.angularVelocity = config.rotationSpeed;
-	} else {
-		newLander.angularVelocity = 0;
-	}
+        if (lander.isRotatingLeft) {
+                newLander.angularVelocity = config.rotationSpeed;
+        } else if (lander.isRotatingRight) {
+                newLander.angularVelocity = -config.rotationSpeed;
+        } else {
+                newLander.angularVelocity = 0;
+        }
 
 	newLander.angle += newLander.angularVelocity * dt;
 
